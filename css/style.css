@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@media(max-width: 560px){
+    body{
+        font-size: 0.9em;
+    }
+
+}
+
+/* Estilo do cabeçalho das paginas */
+header{
+    padding-top: 10px;
+    height: 70px;
+    background: black;
+    color: white;
+}
+.nav-link {
+    color: white;
+}
+.nav-link:hover{
+    color: lightgray;
+}
+
+
+/* Estilo da pagina principal */
+.CorpoPagina{
+    height: 93vh;
+}
+
+/* Pagina do portifolio */
+.BotoesPortifolio{
+    width: 300px;
+    margin-bottom: 5px;
+}
+/* .DivsProjetos{
+    max-width: 400px;
+} */
+
+
+/* Estilo da pagina de contato */
+.CorpoPaginaContato{
+    height: 94vh;
+}
+.Formulario{
+    width: 300px;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Incluindo bootstrap ao projeto  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!--Incluindo css ao projeto  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="Javascript/contato.js"></script>
+    <title>Walison-Contato</title>
+</head>
+<body>
+    <header >
+        <div class="container">
+            <div class="row  ">
+
+                <div class="col-3 p-0">
+                    <a class="navbar-brand" href="index.html"><h1>Mim.</h1></a>
+                </div>
+    
+                <div class="col-9  d-flex justify-content-end p-0 ">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="portfolio.html" class="nav-link">Portfólio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+
+    </header>
+    <main class="container">
+        <div class=" row CorpoPaginaContato d-flex align-items-center justify-content-center ">
+            <div class="col-12 col-md-6 ">
+                <h2>Ola!</h2>
+                <p>Seja Bem-vindo a nossa pagina de contato, aqui você tem acesso as nossas redes sociais e pode nos enviar uma mensagem caso precise de uma solução web!</p>
+            
+                <!--Botão de acesso ao LINKEDIN -->
+                <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/walison-silva-083379210/" target="_blank"><i class="bi bi-linkedin"></i></a> LinkedIn
+            
+                <!--Botão de acesso ao GITHUB  -->
+                <a class="btn btn-outline-dark" href="https://github.com/walisongabriel" target="_blank"><i class="bi bi-github"></i></a> GitHub
+            
+                <!--Botão de acesso ao INSTAGRAM -->
+                <a class="btn btn-outline-danger" href="https://www.instagram.com/walisongabs/" target="_blank"><i class="bi bi-instagram"></i></a> Instagram
+                
+            </div>
+
+            
+            <div class="col-12 col-md-6">
+                <!-- Formulario de Mensagem -->
+                <div class="form-group d-flex justify-content-center ">
+                    
+                    <!-- O email sera enviado por uma API -->
+                    <form class="Formulario" action="https://api.staticforms.xyz/submit" method="post" onsubmit="return ValidaMensagem()">
+                        <h4>Nos envie sua mensagem</h4>
+                        <!--Chave de acesso ao email que vai receber as mensagens  -->
+                        <input type="hidden" name="accessKey" value="57b0431d-d079-470d-905a-6f63c5ca3f8b">
+                        <!-- Redirecionando o ususario para a pagina de cadastro apos o envio da mensagem -->
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/contato.html">
+
+                        <label id="label_name">Nome</label> <br>
+                        <input class="form-control" type="text" name="name" id="name_msg" autocomplete="off" onblur="LimpaName()">
+                        <span class="text-danger" id="erro_name"></span> <br>
+
+                        <label id="label_email">E-mail</label> <br>
+                        <input class="form-control" type="email" name="email" id="email_msg" autocomplete="off" onblur="LimpaEmail()">
+                        <span class="text-danger" id="erro_email"></span> <br>
+
+                        <label id="label_message">Mensagem</label><br>
+                        <textarea class="form-control" name="message" id="message_msg" onblur="LimpaMessage()"></textarea>
+                        <span class="text-danger" id="erro_message"></span> <br>
+
+                        <input class=" form-control btn btn-dark" type="submit" value="Enviar">
+                        <br> <br>
+                        <span class="text-success" id="mensagem_sucesso"></span>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!--Incluindo o js do bootstrap ao projeto  -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
